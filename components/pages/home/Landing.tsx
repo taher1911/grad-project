@@ -1,17 +1,16 @@
-import Link from "next/link";
 import React from "react";
 
 type Props = {};
 
 const Landing = (props: Props) => {
   return (
-    <section className="w-full h-screen text-white flex flex-col justify-center items-center relative overflow-hidden">
+    <section className="w-full h-screen min-h-screen text-white flex flex-col justify-center items-center relative overflow-hidden">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className=" w-[100%] h-[100%] absolute left-0 -top-12 back-video"
+        className=" w-[100vw] h-auto absolute left-0 -top-12 back-video"
         style={{ zIndex: 0 }}
       >
         <source
@@ -33,7 +32,7 @@ const Landing = (props: Props) => {
         </p>
 
         <a
-          href="/signup"
+          href="#_"
           className="inline-flex items-center justify-center h-12 px-10 py-0 text-xl font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-500 border-solid rounded-full cursor-pointer select-none  hover:border-gray-300 focus:shadow-xs focus:no-underline"
         >
           Sign up - it&apos;s free!
