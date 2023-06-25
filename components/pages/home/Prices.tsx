@@ -62,7 +62,7 @@ const data = [
 const Prices = (props: Props) => {
   const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <section className="my-20 w-full">
+    <section className="my-20 w-[90%] mt-10">
       <h2 className="text-center  mx-auto text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
         The right plans,
         <span className="bg-gradient-to-r block from-pink-500 to-violet-500 bg-clip-text text-transparent">
@@ -96,7 +96,7 @@ const Prices = (props: Props) => {
           </button>
         </div>
       </div>
-      <div className="relative flex justify-between max-w-[75%] mx-auto">
+      <div className="relative flex justify-between max-w-[1150px] mx-auto">
         {data.map((el) => (
           <PriceCard
             key={el.id}

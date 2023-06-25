@@ -12,9 +12,9 @@ const Video = (props: Props) => {
         </span>{" "}
         way to check your videos
       </h2>
-      <div className="video relative">
+      <div className="video relative max-w-[1280px] mx-auto">
         <iframe
-          width="1265"
+          width="100%"
           height="660"
           src="https://www.youtube.com/embed/g7xkVEWrX8E"
           title="Web Design Promotional Video - After Effects Template"
