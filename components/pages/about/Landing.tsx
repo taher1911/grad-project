@@ -4,34 +4,36 @@ type Props = {};
 
 const Landing = (props: Props) => {
   return (
-    <section className="w-full h-[80vh]  text-white flex flex-col justify-center items-center relative overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className=" w-[100vw] h-auto absolute left-0 -top-12 back-video"
-        style={{ zIndex: 0 }}
+    <>
+      <section
+        className="w-full h-[90vh]  text-white flex flex-col justify-center items-center relative overflow-hidden bg-fixed  bg-cover"
+        style={{
+          backgroundImage:
+            "url(https://hoodem.com/wp-content/uploads/2021/07/bg-1.jpg)",
+        }}
       >
-        <source
-          src="https://res.cloudinary.com/freelancer3223/video/upload/v1687709737/gradProject/3D_Face_Scan_-_Stock_Motion_Graphics_-_Motion_Array_wqzkqh.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <div className="absolute z-10 left-0 top-0 right-0 bottom-0 flex flex-col items-center justify-center bg-overlay px-[15%] text-center">
-        {/* <h1 className="text-6xl font-bold mb-4 leading-[1.4] capitalize">
-          In only a{" "}
-          <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-            few minutes
-          </span>
-          , you may check on your videos.
-        </h1>
-        <p className="tracking-wide mb-8">
-          Detectiva uses latest deep learning algorithms and AI techniques to
-          make deepfake video identification easier.
-        </p> */}
+        <div className="absolute z-10 left-0 top-0 right-0 bottom-0 flex flex-col justify-center text-[#1f2228]  px-[15%] ">
+          <h2 className="w-[400px] font-[600] text-[25px] tracking-wider">
+            Have you ever desired to be someone else?
+            <br /> ...or someone else to be someone else?
+          </h2>
+        </div>
+      </section>
+      <div className="w-[80%] mx-auto rounded-3xl p-12 text-center -mt-[5rem]  bg-[#04141a] z-20">
+        <h3 className="text-[#e2e9eb] font-[600] text-[36px] ">
+          Be sure, and stay safe.
+        </h3>
+        <span className="w-[100px] inline-block h-1 bg-gradient-to-r from-pink-500 to-violet-500"></span>
+        <p className="text-gray-200 mt-10 leading-8 w-[80%] mx-auto">
+          Detectiva is a deepfake detection platform that uses advanced
+          artificial intelligence and machine learning techniques to analyze
+          media files and determine their authenticity. The platform has a
+          user-friendly interface that makes it easy for individuals,
+          businesses, and organizations to use and customize according to their
+          needs
+        </p>
       </div>
-    </section>
+    </>
   );
 };
 

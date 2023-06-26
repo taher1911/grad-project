@@ -60,6 +60,7 @@ const Navbar = ({}) => {
       id="nav-scroll"
       style={{
         backdropFilter: scroll <= 200 ? "none" : "blur(5px)",
+        color: pathname == "about" ? "#000" : "#fff",
       }}
     >
       <div className="container flex items-center justify-between">
@@ -74,7 +75,12 @@ const Navbar = ({}) => {
                   objectFit: "contain",
                 }}
               /> */}
-              <span className="text-2xl font-bold">Logo</span>
+              <span
+                className="text-2xl font-bold"
+                style={{ color: pathname == "/about" ? "#000" : "#fff" }}
+              >
+                Logo
+              </span>
             </div>
           </Link>
           <ul className="hidden md:flex flex-1 items-center justify-center space-x-8">
@@ -85,6 +91,7 @@ const Navbar = ({}) => {
                 className={`${
                   pathname === link.href && "active"
                 } headerLink  tracking-wider`}
+                style={{ color: pathname == "/about" ? "#000" : "#fff" }}
               >
                 {link.title}
               </Link>

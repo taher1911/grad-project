@@ -1,4 +1,5 @@
 import Landing from "@/components/pages/about/Landing";
+import Steps from "@/components/pages/about/Steps";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
@@ -20,6 +21,7 @@ export default function About() {
         className={`flex min-h-screen flex-col items-center justify-between ${inter.className}`}
       >
         <Landing />
+        <Steps />
       </main>
     </>
   );

@@ -14,7 +14,7 @@ const Landing = (props: Props) => {
         style={{ zIndex: 0 }}
       >
         <source
-          src="https://res.cloudinary.com/freelancer3223/video/upload/v1687560800/gradProject/video_2023-06-24_01-51-43_zn9y5x.mp4"
+          src="https://deepfakesweb.com/assets/bg-0778008a060abb86e5406c07782d03f12d9600c856027ad8a68784ca1d7c892f.mp4"
           type="video/mp4"
         />
       </video>

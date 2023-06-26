@@ -14,10 +14,10 @@ const Video = (props: Props) => {
       </h2>
       <div className="video relative max-w-[1280px] mx-auto">
         <iframe
-          width="100%"
-          height="660"
-          src="https://www.youtube.com/embed/g7xkVEWrX8E"
-          title="Web Design Promotional Video - After Effects Template"
+          width="1259"
+          height="662"
+          src="https://www.youtube.com/embed/uFmUVUeemBE"
+          title="This is the platform Detectiva&#39;s introduction video."
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen

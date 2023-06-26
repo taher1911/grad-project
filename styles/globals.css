@@ -18,6 +18,7 @@
 
 body {
   background: #0c0c0c;
+  min-height: 500vh;
   background-image: url("https://res.cloudinary.com/freelancer3223/image/upload/v1687608813/gradProject/header-img_alxuu5.svg");
 }
 * {
