@@ -33,7 +33,7 @@ const Steps = (props: Props) => {
       </h3>
       <div className="text-center ">
         {" "}
-        <div className="w-full flex justify-between py-16 pt-4 gap-6">
+        <div className="w-full flex justify-between py-12 pt-2 gap-6">
           {STEPS.map((step) => (
             <Step
               key={step.id}
