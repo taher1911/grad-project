@@ -15,8 +15,8 @@ const Video = (props: Props) => {
       <div className="video relative max-w-[1280px] mx-auto">
         <iframe
           width="1259"
-          height="662"
-          src="https://www.youtube.com/embed/uFmUVUeemBE"
+          height="660"
+          src="https://www.youtube.com/embed/n8ta5AE9Vfs"
           title="This is the platform Detectiva&#39;s introduction video."
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

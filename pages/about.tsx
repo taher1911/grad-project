@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer";
+import Check from "@/components/pages/about/Check";
+import ImageScetion from "@/components/pages/about/ImageScetion";
 import Landing from "@/components/pages/about/Landing";
 import Steps from "@/components/pages/about/Steps";
 import { Inter } from "next/font/google";
@@ -22,6 +25,9 @@ export default function About() {
       >
         <Landing />
         <Steps />
+        <ImageScetion />
+        <Check />
+        <Footer />
       </main>
     </>
   );
