@@ -6,16 +6,20 @@ const Landing = (props: Props) => {
   return (
     <>
       <section
-        className="w-full h-[90vh]  text-white flex flex-col justify-center items-center relative overflow-hidden bg-fixed  bg-cover"
+        className="w-full h-[90vh]  text-white flex flex-col justify-center items-center relative overflow-hidden bg-fixed bg-[40%]  bg-cover"
         style={{
           backgroundImage:
-            "url(https://hoodem.com/wp-content/uploads/2021/07/bg-1.jpg)",
+            "url(https://thumbs.dreamstime.com/b/facial-recognition-system-woman-scanner-frame-face-information-186981643.jpg)",
         }}
       >
-        <div className="absolute z-10 left-0 top-0 right-0 bottom-0 flex flex-col justify-center text-[#1f2228]  px-[15%] ">
-          <h2 className="w-[400px] font-[600] text-[25px] tracking-wider">
-            Have you ever desired to be someone else?
-            <br /> ...or someone else to be someone else?
+        <div className="absolute bg-[rgba(0,0,0,0.6)] z-10 left-0 top-0 right-0 bottom-0 flex  flex-col justify-center items-end text-gray-200  px-[15%] ">
+          <h2 className="w-[90%] text-center font-[600] text-5xl leading-[1.5] tracking-wider text-white">
+            "Real Eyes, Realize, Real Lies:
+            <br /> Stay Ahead of Deepfakes with{" "}
+            <span className="bg-gradient-to-r  from-pink-500 to-violet-500 bg-clip-text text-transparent">
+              Detectiva
+            </span>
+            "
           </h2>
         </div>
       </section>

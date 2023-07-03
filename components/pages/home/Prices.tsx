@@ -15,11 +15,12 @@ const data = [
     billedMonthly: "",
     billedAnnually: "",
     list: [
-      "6000+ Video Templates",
-      "3M+ Standard Media Library",
-      "AI Script Generator",
-      "Automated Text to Speech",
-      "Collaborate with Team",
+      "Cloud usage: $5/hour (approx. $10/video detection)",
+      "Advanced mode: -",
+      "Detection Time: 3 Hours",
+      "Limitation for videos and images: 50MB, 90 second video",
+      "Simultaneous Detection: 1 Video",
+      "Video retention period: 50 days",
     ],
   },
   {
@@ -33,11 +34,12 @@ const data = [
     billedMonthly: "*Billed monthly until cancelled",
     billedAnnually: "*Billed $180 annually",
     list: [
-      "6000+ Video Templates",
-      "3M+ Standard Media Library",
-      "AI Script Generator",
-      "Automated Text to Speech",
-      "Collaborate with Team",
+      "Cloud usage: $10/hour (approx. $20/video detection)",
+      "Advanced mode: -",
+      "Detection Time: 1 Hour",
+      "Limitation for videos and images: 200MB, 300 second video",
+      "Simultaneous Detection: 5 Video",
+      "Video retention period: 200 days",
     ],
   },
   {
@@ -51,26 +53,27 @@ const data = [
     billedMonthly: "*Billed monthly until cancelled",
     billedAnnually: "*Billed $360 annually",
     list: [
-      "6000+ Video Templates",
-      "3M+ Standard Media Library",
-      "AI Script Generator",
-      "Automated Text to Speech",
-      "Collaborate with Team",
+      "Cloud usage: $15/hour (approx. $30/video detection)",
+      "Advanced mode: -",
+      "Detection Time: Less than 1 hour  ",
+      "Limitation for videos and images: 500MB, 1000 second video",
+      "Simultaneous Detection: 10 Video",
+      "Video retention period: No limit",
     ],
   },
 ];
 const Prices = (props: Props) => {
   const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <section className="my-20 w-[90%] mt-10">
-      <h2 className="text-center  mx-auto text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
+    <section className="my-20 w-[90%] mt-4 md:mt-10">
+      <h2 className="text-center  mx-auto text-2xl md:text-3xl xl:text-4xl  text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
         The right plans,
-        <span className="bg-gradient-to-r block from-pink-500 to-violet-500 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r inline md:block from-pink-500 to-violet-500 bg-clip-text text-transparent">
           for the right price
         </span>{" "}
       </h2>
       <div className="flex justify-center mb-8">
-        <div className="bg-gray-800 p-1 rounded-full font-bold">
+        <div className="bg-gray-800 p-1 rounded-full font-bold text-[14px] md:text-xl">
           <button
             className="py-2 px-4 cursor-pointer rounded-full tracking-wider "
             style={{
@@ -96,7 +99,7 @@ const Prices = (props: Props) => {
           </button>
         </div>
       </div>
-      <div className="relative flex justify-between max-w-[1150px] mx-auto">
+      <div className="relative flex flex-col gap-y-6 lg:flex-row justify-between max-w-[1200px] mx-auto">
         {data.map((el) => (
           <PriceCard
             key={el.id}

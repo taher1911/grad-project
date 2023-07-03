@@ -30,7 +30,7 @@ const Footer = () => (
     <div className="footer-gradient" />
     <div className={` mx-auto flex flex-col gap-8 w-[90%] max-w-[1300px]`}>
       <div className="flex flex-col">
-        <div className="flex items-center justify-between flex-wrap gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between flex-wrap gap-4 text-center md:text-left">
           <Link
             href={"/"}
             className="font-extrabold text-[24px] text-white tracking-wider uppercase"

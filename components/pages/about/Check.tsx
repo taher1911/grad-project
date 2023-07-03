@@ -6,7 +6,7 @@ type Props = {};
 const Check = (props: Props) => {
   return (
     <section
-      className="w-full  h-[500px]  text-white flex flex-col justify-center items-center relative overflow-hidden bg-fixed bg-cener  bg-cover mt-20 text-center px-[10%]"
+      className="w-full  h-[500px]  text-white flex flex-col justify-center items-center relative overflow-hidden bg-fixed bg-cener  bg-cover my-20 text-center px-[10%]"
       style={{
         backgroundImage:
           "url(https://res.cloudinary.com/freelancer3223/image/upload/v1687823206/gradProject/banner1-1_ief3lk.jpg)",
