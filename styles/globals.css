@@ -90,14 +90,14 @@ body {
 }
 .footer-gradient {
   position: absolute;
-  width: 400px;
-  height: 70px;
+
   left: 37%;
   bottom: 0;
 
   background: #b965fa;
   filter: blur(150px);
 }
+
 @media (min-aspect-ratio: 16/9) {
   .back-video {
     width: 100%;
