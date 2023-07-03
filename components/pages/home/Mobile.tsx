@@ -7,7 +7,7 @@ const Mobile = (props: Props) => {
   return (
     <>
       <section className="relative  md:my-10 w-[95%]  md:w-[90%] max-w-[1300px] ">
-        <h2 className="text-center order-2 md:order-1  mx-auto text-2xl md:text-3xl xl:text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
+        <h2 className="text-center order-2 md:order-1  mx-auto text-xl md:text-3xl xl:text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
           Detectiva{" "}
           <span className="bg-gradient-to-r md:block from-pink-500 to-violet-500 bg-clip-text text-transparent">
             mobile app

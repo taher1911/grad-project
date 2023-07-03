@@ -97,7 +97,7 @@ const Navbar = ({}) => {
                   key={link.id}
                   className={`${
                     pathname === link.href && "active"
-                  } headerLink  tracking-wider mx-2 `}
+                  } headerLink  tracking-wider mx-0 `}
                   // style={{ color: pathname == "/about" ? "#000" : "#fff" }}
                 >
                   {link.title}
@@ -112,19 +112,19 @@ const Navbar = ({}) => {
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span
-              className={`bg-white duration-300 ease-out h-0.5 w-6 rounded-sm transition-all  ${
+              className={`bg-white duration-300 ease-out h-0.5 w-8 rounded-sm transition-all  ${
                 isOpen
                   ? "rotate-45 translate-y-[.3rem] bg-gradient-to-r from-pink-500 to-violet-500"
                   : "-translate-y-0.5"
               }`}
             ></span>
             <span
-              className={`bg-white duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 transition-all ${
+              className={`bg-white duration-300 ease-out h-0.5 w-8 rounded-sm my-[.20rem] transition-all ${
                 isOpen ? "opacity-0" : "opacity-100"
               }`}
             ></span>
             <span
-              className={`bg-white duration-300 ease-out h-0.5 w-6 rounded-sm translate-y-0.5 transition-all ${
+              className={`bg-white duration-300 ease-out h-0.5 w-8 rounded-sm translate-y-0.5 transition-all ${
                 isOpen
                   ? "-rotate-45 -translate-y-[.20rem] bg-gradient-to-r from-pink-500 to-violet-500"
                   : "translate-y-0.5"

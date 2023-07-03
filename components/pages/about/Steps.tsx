@@ -24,8 +24,8 @@ const STEPS = [
 ];
 const Steps = (props: Props) => {
   return (
-    <section className="flex flex-col items-center justify-between  my-20  w-[90%] max-w-[1200px] mx-auto  ">
-      <h3 className="text-center   mx-auto text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
+    <section className="flex flex-col items-center justify-between my-12 md:my-20  w-[90%] max-w-[1200px] mx-auto  ">
+      <h3 className="text-center   mx-auto text-xl md:text-3xl xl:text-4xl text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
         How to check your{" "}
         <span className="bg-gradient-to-r block from-pink-500 to-violet-500 bg-clip-text text-transparent">
           deepfake video
@@ -33,7 +33,7 @@ const Steps = (props: Props) => {
       </h3>
       <div className="text-center ">
         {" "}
-        <div className="w-full flex justify-between py-12 pt-2 gap-6">
+        <div className="w-full flex flex-col md:flex-row justify-between py-12 pt-2 gap-6">
           {STEPS.map((step) => (
             <Step
               key={step.id}
@@ -46,7 +46,7 @@ const Steps = (props: Props) => {
         </div>
         <a
           href="#_"
-          className="inline-flex items-center justify-center h-14 px-10 py-0 text-xl font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-500 border-solid rounded-full cursor-pointer select-none  hover:border-gray-300 focus:shadow-xs focus:no-underline"
+          className="inline-flex items-center justify-center h-14 px-10 py-0 text-[14px] md:text-xl font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-500 border-solid rounded-full cursor-pointer select-none  hover:border-gray-300 focus:shadow-xs focus:no-underline"
         >
           Check your video
         </a>

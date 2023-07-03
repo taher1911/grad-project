@@ -5,7 +5,7 @@ type Props = {};
 const Video = (props: Props) => {
   return (
     <section className=" my-12 md:my-20">
-      <h2 className="text-center w-[90%] md:w-[70%] mx-auto text-2xl md:text-3xl xl:text-4xl text-gray-200 mb-4 md:mb-8 leading-[1.5] tracking-wider font-semibold">
+      <h2 className="text-center w-[90%] md:w-[70%] mx-auto text-xl md:text-3xl xl:text-4xl text-gray-200 mb-4 md:mb-8 leading-[1.5] tracking-wider font-semibold">
         The{" "}
         <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
           quickest and most convenient
