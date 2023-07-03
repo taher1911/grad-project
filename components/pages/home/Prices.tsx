@@ -65,7 +65,7 @@ const data = [
 const Prices = (props: Props) => {
   const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <section className="my-20 w-[90%] mt-4 md:mt-10">
+    <section className="my-10 w-[90%] mt-0 md:mt-10 pt-10" id="Pricing-section">
       <h2 className="text-center  mx-auto text-xl md:text-3xl xl:text-4xl  text-gray-200 mb-8 leading-[1.5] tracking-wider font-semibold">
         The right plans,
         <span className="bg-gradient-to-r inline md:block from-pink-500 to-violet-500 bg-clip-text text-transparent">

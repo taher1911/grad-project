@@ -20,6 +20,7 @@ body {
   background: #0c0c0c;
   background-image: url("https://res.cloudinary.com/freelancer3223/image/upload/v1687608813/gradProject/header-img_alxuu5.svg");
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 * {
   padding: 0;
