@@ -15,7 +15,7 @@ const Start = (props: Props) => {
           </span>{" "}
         </h2>
         <a
-          href="#_"
+          href="/checking"
           className="inline-flex items-center justify-center h-14 px-10 py-0 text-[15px] md:text-xl font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-gray-500 border-solid rounded-full cursor-pointer select-none  hover:border-gray-300 focus:shadow-xs focus:no-underline"
         >
           Get started - it&apos;s free!

@@ -29,7 +29,7 @@ const LINKS = [
   },
   {
     id: 4,
-    title: "Support",
+    title: "Contact Us",
     href: "/support",
   },
 ];
@@ -136,7 +136,7 @@ const Navbar = ({}) => {
               Login
             </Link>
             <Link
-              href="/signup"
+              href="/register"
               className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>

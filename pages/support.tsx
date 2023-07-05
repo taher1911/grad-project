@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Contact from "@/components/pages/support/Contact";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
@@ -18,8 +20,9 @@ export default function Support() {
       <main
         className={`flex min-h-screen flex-col items-center justify-between ${inter.className}`}
       >
-        <h1 className="text-white text-2xl mt-[40vh]">support page</h1>
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
