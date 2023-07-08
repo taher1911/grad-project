@@ -7,9 +7,11 @@ type Props = {
   isOpen: boolean;
   LINKS: any;
   pathname: string;
+  auth: any;
+  logoutHandler: any;
 };
 
-const MobileNav = ({ isOpen, LINKS, pathname }: Props) => {
+const MobileNav = ({ isOpen, LINKS, pathname, auth, logoutHandler }: Props) => {
   return (
     <AnimatePresence mode="wait">
       {isOpen ? (
@@ -53,16 +55,36 @@ const MobileNav = ({ isOpen, LINKS, pathname }: Props) => {
           </ul>
 
           <div className="flex items-center justify-center mt-16">
-            <Link href={"/login"} className="mr-3 tracking-wider font-bold ">
-              Login
-            </Link>
-            <Link
-              href="/signup"
-              className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
-            >
-              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative font-bold tracking-wider">Sign Up</span>
-            </Link>
+            {!auth && (
+              <>
+                <Link
+                  href={"/login"}
+                  className="mr-3 tracking-wider font-bold "
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/register"
+                  className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
+                >
+                  <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                  <span className="relative font-bold tracking-wider">
+                    Sign Up
+                  </span>
+                </Link>
+              </>
+            )}
+            {auth && (
+              <button
+                className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
+                onClick={logoutHandler}
+              >
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative font-bold tracking-wider">
+                  Logout
+                </span>
+              </button>
+            )}
           </div>
         </motion.nav>
       ) : null}

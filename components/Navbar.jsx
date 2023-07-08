@@ -36,6 +36,8 @@ const LINKS = [
 
 const Navbar = ({}) => {
   const { pathname } = useRouter();
+  const router = useRouter();
+  const [auth, setAuth] = useState(false);
   const [scroll, setScroll] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -56,6 +58,22 @@ const Navbar = ({}) => {
       setScroll(currentScrollPos);
     };
   }, []);
+
+  useEffect(() => {
+    const userInfo =
+      localStorage.getItem("detectivaUser") !== "undefined"
+        ? JSON.parse(localStorage.getItem("detectivaUser"))
+        : localStorage.clear();
+
+    if (userInfo !== "undefined") {
+      setAuth(userInfo);
+    }
+  }, []);
+
+  const logoutHandler = () => {
+    localStorage.removeItem("detectivaUser");
+    router.reload();
+  };
   return (
     <>
       <nav
@@ -131,22 +149,48 @@ const Navbar = ({}) => {
               }`}
             ></span>
           </button>
-          <div className="hidden md:flex items-center justify-center ">
-            <Link href={"/login"} className="mr-3 tracking-wider font-bold ">
-              Login
-            </Link>
-            <Link
-              href="/register"
-              className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
-            >
-              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative font-bold tracking-wider">Sign Up</span>
-            </Link>
+          <div className="hidden md:flex items-center justify-end ">
+            {!auth && (
+              <>
+                <Link
+                  href={"/login"}
+                  className="mr-3 tracking-wider font-bold "
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/register"
+                  className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
+                >
+                  <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                  <span className="relative font-bold tracking-wider">
+                    Sign Up
+                  </span>
+                </Link>
+              </>
+            )}
+            {auth && (
+              <button
+                className=" rounded px-7 py-2 overflow-hidden group bg-gradient-to-r from-pink-500 to-violet-500 relative text-white hover:scale-105 transition-all ease-out duration-300"
+                onClick={logoutHandler}
+              >
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-transparent opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative font-bold tracking-wider">
+                  Logout
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </nav>
 
-      <MobileNav isOpen={isOpen} LINKS={LINKS} pathname={pathname} />
+      <MobileNav
+        isOpen={isOpen}
+        LINKS={LINKS}
+        pathname={pathname}
+        auth={auth}
+        logoutHandler={logoutHandler}
+      />
     </>
   );
 };
