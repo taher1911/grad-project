@@ -8,14 +8,62 @@ import { FcGoogle } from "react-icons/fc";
 
 const inter = Inter({ subsets: ["latin"] });
 
+//google auth
+import { useGoogleLogin } from "@react-oauth/google";
+// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
+import axios from "axios";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const router = useRouter();
+  //login with gmail
+  const login = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
+          }
+        );
+
+        localStorage.setItem("detectivaUser", JSON.stringify(res.data));
+        const { name, picture, sub } = res.data;
+        const doc = {
+          _id: sub,
+          _type: "user",
+          userName: name,
+          image: picture,
+        };
+        // const user = await client.createIfNotExists(doc);
+        const user = true;
+        if (user) {
+          router.push("/");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    onFailure: (response) => console.log(response),
+  });
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
     console.log(email, password);
   };
+
+  useEffect(() => {
+    const user = localStorage.getItem("detectivaUser");
+    if (user) {
+      router.push("/");
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -34,7 +82,7 @@ export default function Login() {
         <button
           type="button"
           className="bg-gray-300 hover:opacity-[.9] transition-all duration-200 text-black tracking-wide font-bold flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none w-full"
-          onClick={() => {}}
+          onClick={() => login()}
         >
           {" "}
           <FcGoogle className="mr-2 text-xl" /> Log in with google

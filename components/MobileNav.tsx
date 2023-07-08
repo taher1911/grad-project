@@ -10,7 +10,6 @@ type Props = {
 };
 
 const MobileNav = ({ isOpen, LINKS, pathname }: Props) => {
-  console.log(LINKS);
   return (
     <AnimatePresence mode="wait">
       {isOpen ? (
